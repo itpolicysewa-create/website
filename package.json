@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "postbuild": "node scripts/generate-seo-files.mjs",
-    "start": "serve -s out -l $PORT",
+    "start": "next start -p $PORT",
     "lint": "eslint"
   },
   "dependencies": {

@@ -9,8 +9,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.policysewa.in";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.policysewa.in"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "POLICY SEWA | Trusted Insurance Broker",
     template: "%s | POLICY SEWA",

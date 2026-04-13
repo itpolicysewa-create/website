@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const siteUrl = "https://www.policysewa.in";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.policysewa.in";
 const outDir = path.resolve(process.cwd(), "out");
 
 const routes = [

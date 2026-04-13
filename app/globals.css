@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: light;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+  --primary: #0e3a8a;
+  --primary-dark: #082c6b;
+  --accent: #0ea5a4;
+  --muted: #64748b;
+  --card: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+a,
+button {
+  transition: all 0.2s ease;
+}
+
+.container-shell {
+  margin-inline: auto;
+  width: min(1120px, 92%);
+}
+
+.section-spacing {
+  padding-block: 4rem;
+}
+
+@media (max-width: 768px) {
+  .section-spacing {
+    padding-block: 3rem;
+  }
+}
+
+.card-elevated {
+  background: var(--card);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px -20px rgba(15, 23, 42, 0.3);
+}
+
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  box-shadow: 0 0 0 3px rgba(14, 165, 164, 0.35);
 }
